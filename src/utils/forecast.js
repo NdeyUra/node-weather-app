@@ -7,7 +7,8 @@ const forecast = (lat, lon, callback) => {
         } else if (body.message) {
             callback('Unable to find Latitude and Longitude values', undefined);
         } else {
-            callback(undefined, body.current.weather[0].description + '.It is currently ' + body.current.temp + ' degree outside.There is ' + body.current.clouds + '% clouds .The Maximum Temparature is ' + body.daily[0].temp.max + ' degree and minimum is ' + body.daily[0].temp.min + ' degree.The temparature that feels is ' + body.current.feels_like + ' degree and the wind speed is ' + body.current.wind_speed + ' km/h');
+            const a = body.current.weather[0].description;
+            callback(undefined, a[0].toUpperCase() + a.slice(1) + '.It is currently ' + body.current.temp + ' degree outside.There is ' + body.current.clouds + '% clouds .The Maximum Temparature is ' + body.daily[0].temp.max + ' degree and minimum is ' + body.daily[0].temp.min + ' degree.The temparature that feels is ' + body.current.feels_like + ' degree and the wind speed is ' + body.current.wind_speed + ' km/h');
         }
     })
 }
