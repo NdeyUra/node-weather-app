@@ -1,4 +1,3 @@
-console.log('javaScript loaded successfully');
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.getElementById('message-1')
