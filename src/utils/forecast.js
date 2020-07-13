@@ -1,6 +1,6 @@
 const request = require('request');
 const forecast = (lat, lon, callback) => {
-    const url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&%20&appid=8f61b0c6f1864a158dafc180cc3451bc'
+    const url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&%20&appid=8f61b0c6f1864a158dafc180cc3451bc&units=metric'
     request({ url, json: true }, (error, { body }) => {
         if (error) {
             callback('Unable to connect to weather network', undefined);
